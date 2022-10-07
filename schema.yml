@@ -1,0 +1,8 @@
+openapi: 3.0.3
+info:
+  title: Backend Challenge - Reading and Saving CNAB File
+  version: 1.0.0
+  description: This API intends to receive and save an CNAB file, being able to reproduce
+    the CRUD proccess with the received file.
+paths: {}
+components: {}
