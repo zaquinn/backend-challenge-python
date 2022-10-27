@@ -16,13 +16,12 @@ class CnabView(generics.ListCreateAPIView):
     parser_classes = [MultiPartParser,JSONParser, FormParser, FileUploadParser]
 
     def post(self, request:Request, *args, **kwargs) -> Response:
-
         if request.FILES.get("file"):
                 uploaded_file = request.FILES["file"].read()
-                print(uploaded_file.split())
-                return Response("sucesso", status.HTTP_201_CREATED)
+                splited_lines = uploaded_file.decode("utf-8").splitlines()
+                print(splited_lines)
+                return Response("dentro loop", status.HTTP_201_CREATED)
         
-
         return Response("sucesso", status.HTTP_201_CREATED)
     
     # def perform_create(self, serializer):
