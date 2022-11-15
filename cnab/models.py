@@ -4,9 +4,9 @@ from django.db import models
 class Cnab(models.Model):
     date = models.DateField()
     value = models.CharField(max_length=10)
-    cpf = models.CharField(max_length=10)
+    cpf = models.CharField(max_length=11)
     card = models.CharField(max_length=12)
-    hour = models.DateTimeField()
+    hour = models.TimeField()
     owner = models.CharField(max_length=14)
     store_name = models.CharField(max_length=19)
 
